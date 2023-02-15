@@ -11,12 +11,9 @@ body{
     background-position:top;
 }
 
-bg_img{
-    
-}
 
 header{
-    background-color: ;
+    background-color:#3b515e;
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
