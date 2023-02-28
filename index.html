@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Home</title>
         <link rel="stylesheet" href="style.css">
+        <script src="clock.js" type="text/javascript"></script>
+        <title>Home</title>
     </head>
 
     <header>
@@ -18,9 +19,9 @@
             <div class="dropdown">
                 <button class="link">Projects</button>
                     <div class="dropdown-menu">
-                            <a href="#" class="link">Poem</a>
-                            <a href="#" class="link">Project 2</a>
-                            <a href="#" class="link">Project 3</a>
+                            <a href="Week2/poem.html" class="list">Poem</a>
+                            <a href="#" class="list">Project 2</a>
+                            <a href="#" class="list">Project 3</a>
                     </div>
             </div>
             
@@ -30,12 +31,23 @@
     
     <body>
         <div class="home_main">
-            <h1>Welcome!</h1>
-            <h2>I am Maimuna</h2>
-            <h3>I am a Video Editor and UI designer based in New York</h3>
+            <div>
+                <h1>Welcome!</h1>
+                <h2>I am Maimuna</h2>
+                <h3>I am a Video Editor and UI designer <br> based in New York</h3>
+            </div>
+            <img src="images/mypic.png" alt="Me">
             
         </div>
         
+        <div class="time-container">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="session">AM</span>
+        </div>
         
     </body>
 </html>
