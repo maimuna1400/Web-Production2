@@ -2,9 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/addons/p5.sound.min.js"></script>
         <link rel="stylesheet" href="poemStyle.css">
+
+        <script src="P5/libraries/p5.min.js"></script>
+        <script src="P5/libraries/p5.sound.min.js"></script>
+
         <title>Poem</title>
     </head>
     <header>
@@ -30,15 +32,39 @@
 
     <body>
         <div class="container">
+            <div class="popup" id="popup">
+                <div class="overlay"></div>
+                <div class="content">
+                    <div class="close-btn" onclick="togglePopup()">&times;</div>
+                    <p>I was angry with my friend;<br> 
+                        I told my wrath, my wrath did end.<br>
+                        I was angry with my foe: <br>
+                        I told it not, my wrath did grow. <br>
+                        <br>
+                        And I waterd it in fears,<br>
+                        Night & morning with my tears: <br>
+                        And I sunned it with smiles,<br>
+                        And with soft deceitful wiles. <br>
+                        <br>
+                        And it grew both day and night. <br>
+                        Till it bore an apple bright. <br>
+                        And my foe beheld it shine,<br>
+                        And he knew that it was mine. <br>
+                        <br>
+                        And into my garden stole, <br>
+                        When the night had veild the pole; <br>
+                        In the morning glad I see; <br>
+                        My foe outstretched beneath the tree.</p>
+                </div>
+            </div>
             <div id="info">
-                <h1>A Poison Tree</h1>
+                    <a href="https://www.poetryfoundation.org/poems/45952/a-poison-tree" target="_blank" rel="noopener noreferrer" class="js_hover" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">A Poison Tree</a>
                 <p>by</p>
                 <h2>WILLIAM BLAKE</h2>
             </div>
-            <section class="home">
-                   <div class="row">
+            <div class="home">
                        <div class="home-text">
-                            <p class="animate-text">
+                            <p class="animate-text" onclick="togglePopup()">
                                 <span>I was angry with my friend;<br>
                                     I told my wrath, my wrath did end.</span>
                                <span>I was angry with my foe:<br>
@@ -57,12 +83,11 @@
                                 My foe outstretched beneath the tree.</span>
                             </p>
                        </div>
-                   </div>
-            </section>
-            <script src="Tree/sketch.js" type="text/javascript"></script>
+                    </div>
+            
         </div> 
-        
-        
         <script src="Poem.js" type="text/javascript"></script> 
+
+        <script src="P5/sketch.js"></script>
     </body>
 </html>

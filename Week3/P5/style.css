@@ -1,7 +1,8 @@
 html, body {
   margin: 0;
-  padding-left: 50px;
+  padding: 0;
 }
+
 canvas {
-  display: flex;
+  display: block;
 }

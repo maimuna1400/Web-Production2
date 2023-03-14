@@ -135,15 +135,27 @@ a{
 }
 
 .container{
-    display: flex;
-    justify-content: space-between;
+    display: inline-block;
+    justify-content: center;
     align-items: center;
-    margin: 5em 5em;
+    margin: 10em 6em;
 }
 
-#info h1{
+#info {
+    display: inline-block;
+   /** position: absolute;
+    top: 35%;
+    bottom: 50%;**/
+    left: 20%;
+}
+
+#info a{
+    margin-top: 0;
+    font-family: 'Lexend', sans-serif;
     font-size: 3rem;
     color: #556e8f;
+    line-height: 2em;
+    cursor: pointer;
 }
 
 #info h2{
@@ -151,49 +163,53 @@ a{
     font-size: 1.5rem;
     color: #AD8B73;
     font-weight: 100;
-    margin-bottom: 0%;
+    line-height: 20px;
 }
 
 #info p{
     margin-top: 0%;
     bottom: 0%;
-}
-
-#info {
-    display: inline-block;
-    position: absolute;
-    top: 35%;
-    bottom: 50%;
-    left: 20%;
+    line-height: 0;
 }
 
 .home .home-text{
-    padding-left: 45em;
-    padding-top: 8em;
+   /** padding-left: 45em;**/
+    padding-top: 3em;
     position: relative;
-    z-index: 2;
 }
 
 .home .home-text p{
    margin:0;
    overflow: hidden;
 }
-.home .home-text p span{
+.animate-text span{
     font-family:'Montserrat', sans-serif;
+    font-size: 35px;
     font-weight:normal;
     color:#E16B67;
     display: inline-block;
-    line-height: 30px;
+    line-height: 50px;
     display: none;
+    cursor: pointer;
 }
 
-.home .home-text p span.text-in{
+.animate-text span.text-in{
    display: block;
    animation: textIn .5s ease;
 }
-.home .home-text p span.text-out{
+
+.animate-text span.text-out{
    animation: textOut .5s ease;
 }
+
+/**.animate-text span.text-in:hover{
+    animation-play-state: paused;
+}
+
+.animate-text span.text-out:hover{
+    animation-play-state: paused;
+}**/
+
 @keyframes textIn{
    0%{
        transform: translateY(100%);
@@ -212,7 +228,56 @@ a{
    }
 }
 
-.tree {
+.popup .overlay{
+    display: none;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+.popup .content{
     display: flex;
-    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    background: #F3F3F2;
+    width: 400px;
+    height: 550px;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    color: #515963;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.popup .close-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    background: #AD8B73;
+    color: #F3F3F2;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.popup.active .overlay{
+    display: block;
+}
+
+.popup.active .content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%,-50%) scale(1);
 }
