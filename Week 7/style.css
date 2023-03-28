@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@700&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Righteous&display=swap');
+
+body{
+    margin: 0;
+    background-color: #FEF1E6;
+}
+
+header{
+    background-color:#7D8F69;
+    display: inline-flex;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    top: 0;
+}
+
+h1{
+    margin-top: 0;
+    font-family: 'Lexend', sans-serif;
+}
+
+h2{
+    top: 0;
+    font-family:'Montserrat', sans-serif;
+}
+
+h3{
+    font-family: 'Koulen', cursive;
+}
+
+p{
+    font-family:'Montserrat', sans-serif;
+    line-height: 25px;
+    color: #515963;
+}
+
+a{
+    text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    display: block;
+    padding: 0 3rem;
+}
+
+.logo a{
+    text-decoration: none;
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    color: white;
+    text-align: center;
+}
+
+.logo a:hover{
+    color: #FFB085;
+}
+
+.navbar a, button{
+    text-decoration: none;
+    font-family:'Montserrat', sans-serif;
+    font-size: 18px;
+    color: white;
+    width: 100px;
+    display: block;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.navbar{
+    display: inline-flex;
+    height: 6rem;
+    align-items: center;
+    padding: .25rem 10rem;
+    gap: 3rem;
+}
+
+.link{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.navbar .link:hover{
+    color: #F9D5A7;
+}
+
+.navbar .list{
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 2em;
+}
+
+.navbar .list:hover{
+    color: #d65f57;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-menu{
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    top: calc(100%);
+    background-color: #F9D5A7;
+    border-radius: 0 50px 50px 50px;
+    width: 15rem;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    pointer-events:visible;
+    transform: translateY(0);
+}
+
+button {
+  font-family: 'Belgrano', serif;
+  margin-top: 10px;
+  background-color: #7E3517;
+  border: none;
+  padding: 4px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  cursor: pointer;
+  color: white;
+
+}
+
+.generate {
+  margin-top: 100px;
+}
+
+section {
+  margin: 20px auto;
+  text-align: center;
+}
+
+main {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+li {
+list-style: url('https://api.iconify.design/octicon/bookmark-fill-24.svg?color=white');
+color: white;
+text-align: left;
+}
+
+/*.rectangle {
+  height: 100%;
+  width: 40%;
+  background-color: white;
+  border-left: blue;
+  position: absolute;
+  top: 0;
+  left: 30%;
+}*/
+
+.rectangle2 {
+
+  width: 95%;
+  top: 0;
+  left: 2.5%;
+}
+
+img {
+  width: 300px;
+}
+
+#by {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #551606;
+  text-decoration: underline;
+}
+
+#publications {
+  text-align: center;
+  position: relative;
+}
+
+#search {
+color: #551606;
+}
