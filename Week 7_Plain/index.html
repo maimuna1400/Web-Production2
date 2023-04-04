@@ -1,0 +1,52 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <header>
+    <div  class="logo">
+        <a href="index.html" class="title">Maimuna</a>
+    </div>
+    <div class="navbar">
+        <div class="dropdown">
+            <button class="link">About </button>
+        </div>
+        <div class="dropdown">
+            <button class="link">Projects</button>
+                <div class="dropdown-menu">
+                        <a href="Week3/Poem.html" class="list">Poem</a>
+                        <a href="#" class="list">Project 2</a>
+                        <a href="#" class="list">Project 3</a>
+                </div>
+        </div>
+        
+        </div>
+    </div>
+  </header>
+
+  <body>
+    <main>
+    <div class="container">
+      <div class="text-center">
+        <h1>
+          ANIME LIST
+        </h1>
+        <h2>Get a random anime by clicking below</h2>
+        <div class="search_container">
+          <div class="search_bar">
+            <input type="text" placeholder="Search any anime" id="searchAnime">
+            <button class="button-primary" id="get_anime"><img src="images/search-icon.webp"></button>
+          </div>
+        </div>
+    
+      </div>
+      <div id="animeTitle"></div>
+      <div class="anime-details-content"></div>
+    </div>
+  </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>

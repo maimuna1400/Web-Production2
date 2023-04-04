@@ -7,11 +7,6 @@
   src: url(/Fonts/one-piece-font/OnePiece-zAqL.ttf);
 }
 
-html{
-
-  cursor: url('images/naruto-cursor2.png'), auto;
-}
-
 body{
     margin: 0;
     background-color: #FEF1E6;
@@ -146,7 +141,6 @@ a{
 .container {
   justify-content: center;
   text-align: center;
-  padding-bottom: 5em;
 }
 
 .text-center{
@@ -222,80 +216,37 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: url('images/naruto-cursor2.png'), auto;
+  cursor: pointer;
 }
 
 .anime_img img{
-  min-height: 45vh;
-  max-height: 45vh;
-  max-width: 18vw;
-  margin-top: 1.5em;
-  /*box-shadow: 5px 5px 0px #AD8B73;*/
-  border: none;
+  min-height: 30vh;
+  max-height: 50vh;
+  box-shadow: 5px 5px 0px #AD8B73;
   border-radius: 5%;
-  box-shadow: none;
-  transition: border-width .3s ease-in-out, box-shadow .3s ease-in-out;
+  transform: scale(100%);
+  transition: transform .5s ease-in-out;
 }
 
 .anime_img img:hover{
-  border: solid 5px #fff;
-  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+  transform: scale(110%);
 }
 
 #animeTitle {
-  margin: 0 2em;
+  margin: 5em 2em;
   font-size: 18px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-between;
   align-items: flex-start;
-  line-height: 1.5em;
 }
 
 .get-anime h3{
-  padding: 0 1em 2em 1em;
+  padding: 0 2em 2em 2em;
   text-decoration: none;
-  color: #7E3517;
-  transition: color .3s ease-in-out;
+  color: #551606;
 }
 
-.get-anime h3:hover{
-  color: #fff;
-}
-
-.card {
-  margin: 100px auto 0;
-  width: 20vw;
-  height: 65vh;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  transform: scale(100%);
-  transition: transform .5s ease-in-out;
-}
-
-.card:hover{
-  transform: scale(110%);
-}
-
-.card__inner {
-  width: 100%;
-  height: 100%;
-  transition: transform 1s;
-  position: relative;
-}
-
-
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
-  background-image: linear-gradient(to bottom right, #E16B67, #FFB085);
-  display: block;
-  align-items: center;
-  justify-content: center;
+#search {
+color: #551606;
 }

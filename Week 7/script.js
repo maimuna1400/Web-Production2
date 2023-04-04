@@ -1,49 +1,54 @@
-//onload function
-$(function() {
-  
-    $("#anime-search").click(function() {
-      let searchTerm = $("#anime").val()
-      $("#fail").text('')
-      $("#publications").html('')
-      // make sure the searchTerm isn't empty
-      if (searchTerm !== '') {
-        // here we pass the API the topic as our "query"
-  
-        $.getJSON(`https://api.jikan.moe/v4/anime?q=${searchTerm}&order_by=title&sort=asc&limit=10`, function(data) {
-          //but, depending on what we search, we could get thousands of things or nothing
-          //so we should account for the first case
-  
-          // let booksData;
-          $('#by').text('Your result for ' + searchTerm + ':')
-  
-          $.getJSON(`https://api.jikan.moe/v4/anime`, function(worksData) {
-            let animeData = worksData['entries'];
-  
-            if (animeData.length <= 0) {
-              $('#fail').text("No anime with that name.")
-          } else {
-            for (let i = 0; i < 10; i++) {
-              let work = animeData[i]
-              $('#publications').append('<li>' + work.title + '</li>');
+const animeList = document.getElementById('animeTitle');
+
+window.onload = () => {
+
+    const searchFieldElement = document.getElementById("searchAnime");
+    document.getElementById("get_anime").onclick = (event) => {
+        searchAnime(searchFieldElement.value);
+    };
+}
+
+function searchAnime(query) {
+    const url = `https://api.jikan.moe/v4/anime?q=${query}&sfw&limit=16`;
+    fetch(url)
+
+        .then(response => response.json())
+        .then(data => {
+
+            console.log(data)
+
+            let html = "";
+
+            if (data.data) {
+
+                data.data.forEach(data => {
+                    html += `
+                    <div  data-id = "${data.mal_id}">
+                        <div class="card">
+		                    <div class="card__inner">
+			                    <div class="card__face">
+                                    <div class = "anime_img">
+                                        <img src = "${data.images.jpg.image_url}" alt = "anime">
+                                    </div>
+                                    <div class = "anime_name">
+                                        <a href = "${data.url}" class = "get-anime" target="_blank"><h3>${data.title}</h3></a>
+                                    </div>
+			                    </div>
+		                    </div>
+	                    </div>
+                    </div>
+                `;
+                });
+                
+                animeList.classList.remove('notFound');
             }
-          }
-          }).fail(function() {
-            console.log("FAILED");
-          })
-  
-          // this could return
-      }).fail(function() {
-        //we can add a "fail" function to our AJAX request to do something if it fails
-        $('#fail').text("No authors with that name.")
-        console.log("Try a different author.")
-        })
-      }
-      //reset the input
-      $('#author').val('')
-  
-      $('#search').text('Search for another anime')
-    })
-  
-  
-  })
-  
+            else {
+
+                html = "we didn't find any anime";
+
+                animeList.classList.add('notFound');
+            }
+            animeList.innerHTML = html;
+        });
+}
+

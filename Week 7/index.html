@@ -1,58 +1,59 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <link rel="stylesheet" href="style.css">
- </head>
 
- <header>
-  <div  class="logo">
-      <a href="index.html" class="title">Maimuna</a>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<header>
+  <div class="logo">
+    <a href="index.html" class="title">Maimuna</a>
   </div>
   <div class="navbar">
-      <div class="dropdown">
-          <button class="link">About </button>
+    <div class="dropdown">
+      <button class="link">About </button>
+    </div>
+    <div class="dropdown">
+      <button class="link">Projects</button>
+      <div class="dropdown-menu">
+        <a href="Week3/Poem.html" class="list">Poem</a>
+        <a href="#" class="list">Project 2</a>
+        <a href="#" class="list">Project 3</a>
       </div>
-      <div class="dropdown">
-          <button class="link">Projects</button>
-              <div class="dropdown-menu">
-                      <a href="Week3/Poem.html" class="list">Poem</a>
-                      <a href="#" class="list">Project 2</a>
-                      <a href="#" class="list">Project 3</a>
-              </div>
-      </div>
-      
-      </div>
+    </div>
+
+  </div>
   </div>
 </header>
 
- <body>
-
-
-   <div class="rectangle">
-     <div class="rectangle2">
-       <div class="generate">
-         <main>
-           <section> <h2> Anime List </h2></section>
-           <input id="anime">
-           <br>
-           <button id="anime-search">GO</button>
-           <br>
-           <div id="by"></div>
-           <div id="publications">
-           </div>
-
-           <p id="fail"></p>
-
-           <div id="search"></div>
-
-
-          </main>
+<body>
+  <main>
+    <div class="container">
+      <div class="text-center">
+        <h1>
+          ANIME LIST
+        </h1>
+        <h2>Get anime list by clicking on search icon</h2>
+        <div class="search_container">
+          <div class="search_bar">
+            <input type="text" placeholder="Search any anime" id="searchAnime">
+            <button class="button-primary" id="get_anime"><img src="images/search-icon.webp"></button>
+          </div>
         </div>
-  </div>
-  </div>
 
+      </div>
+      <div id="animeTitle">
+        <div class="card">
+          <div class="card__inner"></div>
+        </div>
+      </div>
+      
+    </div>
+  </main>
 
-   <script src="script.js"></script>
- </body>
+  <script src="script.js"></script>
+  
+</body>
+
 </html>
